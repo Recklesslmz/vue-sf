@@ -33,7 +33,14 @@
 
 <script>
 export default {
-
+  created(){
+    this.getCurrent()
+  },
+  methods:{
+      getCurrent(){
+         console.log(this.commonUrl.name)
+      }
+  }
 
 }
 </script>
