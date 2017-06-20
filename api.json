@@ -2,23 +2,28 @@
   "tab": {
     "list": [{
         "name": "头条",
-        "icon": ""
+        "icon": "http://oqjgod7s1.bkt.clouddn.com/toutiao.png",
+        "icon1": "http://oqjgod7s1.bkt.clouddn.com/toutiao0.png"
       },
       {
         "name": "专栏",
-        "icon": ""
+        "icon": "http://oqjgod7s1.bkt.clouddn.com/toutiao.png",
+        "icon1": "http://oqjgod7s1.bkt.clouddn.com/toutiao0.png"
       },
       {
         "name": "问答",
-        "icon": ""
+        "icon": "http://oqjgod7s1.bkt.clouddn.com/toutiao.png",
+        "icon1": "http://oqjgod7s1.bkt.clouddn.com/toutiao0.png"
       },
       {
         "name": "发现",
-        "icon": ""
+        "icon": "http://oqjgod7s1.bkt.clouddn.com/toutiao.png",
+        "icon1": "http://oqjgod7s1.bkt.clouddn.com/toutiao0.png"
       },
       {
         "name": "我的",
-        "icon": ""
+        "icon": "http://oqjgod7s1.bkt.clouddn.com/toutiao.png",
+        "icon1": "http://oqjgod7s1.bkt.clouddn.com/toutiao0.png"
       }
     ]
   }
