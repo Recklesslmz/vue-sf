@@ -13,6 +13,16 @@ const actions = {
       .catch(function (error) {
         console.log(error);
       });
+  },
+  [types.NAV_TAB_LIST]({commit}){
+    axios.get('/api/nav')
+      .then(function (response) {
+        console.log(response.data.data);
+        commit(types.NAV_TAB_LIST, response.data.data)
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 }
 

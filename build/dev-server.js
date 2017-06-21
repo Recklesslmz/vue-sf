@@ -25,6 +25,7 @@ var proxyTable = config.dev.proxyTable
 var app = express()
 var appData = require('../api.json')
 var tab = appData.tab
+var nav = appData.nav
 
 
 var apiRoutes = express.Router()
@@ -33,6 +34,13 @@ apiRoutes.get('/tab', function (req, res) {
   res.json({
     errno: 0,
     data: tab
+  });
+})
+
+apiRoutes.get('/nav', function (req, res) {
+  res.json({
+    errno: 0,
+    data: nav
   });
 })
 

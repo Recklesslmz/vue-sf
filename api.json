@@ -7,24 +7,42 @@
       },
       {
         "name": "专栏",
-        "icon": "http://oqjgod7s1.bkt.clouddn.com/toutiao.png",
-        "icon1": "http://oqjgod7s1.bkt.clouddn.com/toutiao0.png"
+        "icon": "http://oqjgod7s1.bkt.clouddn.com/zhuanlan.png",
+        "icon1": "http://oqjgod7s1.bkt.clouddn.com/zhuanlan0.png"
       },
       {
         "name": "问答",
-        "icon": "http://oqjgod7s1.bkt.clouddn.com/toutiao.png",
-        "icon1": "http://oqjgod7s1.bkt.clouddn.com/toutiao0.png"
+        "icon": "http://oqjgod7s1.bkt.clouddn.com/wenda.png",
+        "icon1": "http://oqjgod7s1.bkt.clouddn.com/wenda0.png"
       },
       {
         "name": "发现",
-        "icon": "http://oqjgod7s1.bkt.clouddn.com/toutiao.png",
-        "icon1": "http://oqjgod7s1.bkt.clouddn.com/toutiao0.png"
+        "icon": "http://oqjgod7s1.bkt.clouddn.com/faxian.png",
+        "icon1": "http://oqjgod7s1.bkt.clouddn.com/faxian0.png"
       },
       {
         "name": "我的",
-        "icon": "http://oqjgod7s1.bkt.clouddn.com/toutiao.png",
-        "icon1": "http://oqjgod7s1.bkt.clouddn.com/toutiao0.png"
+        "icon": "http://oqjgod7s1.bkt.clouddn.com/wode.png",
+        "icon1": "http://oqjgod7s1.bkt.clouddn.com/wode0.png"
       }
+    ]
+  },
+  "nav":{
+    "list":[
+      {"name":"JavaScript"},
+      {"name":"HTML"},
+      {"name":"CSS"},
+      {"name":"IOS"},
+      {"name":"Android"},
+      {"name":"Vue.js"},
+      {"name":"React.js"},
+      {"name":"Angular.js"},
+      {"name":"Webpack"},
+      {"name":"sass"},
+      {"name":"php"},
+      {"name":"jquery"},
+      {"name":"GitHub"},
+      {"name":"promise"}
     ]
   }
 }

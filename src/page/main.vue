@@ -1,5 +1,7 @@
 <template>
   <div class="main">
+    <v-search></v-search>
+    <v-nav></v-nav>
     <v-tab></v-tab>
   </div>
 
@@ -7,6 +9,8 @@
 
 <script type="text/ecmascript-6">
   import Tab from '../components/tab.vue'
+  import Search from '../components/search.vue'
+  import Nav from '../components/nav.vue'
   export default{
     created(){
 
@@ -14,7 +18,9 @@
     methods: {},
     computed: {},
     components: {
-      vTab: Tab
+      vTab: Tab,
+      vSearch:Search,
+      vNav:Nav
     }
   }
 </script>

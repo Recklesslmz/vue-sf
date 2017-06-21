@@ -2,8 +2,9 @@
   <div class="tab">
     <div class="menu">
       <div :class="[menuList,{menuListChecked:chooseIndex == index}]"  @click="chooseTab(index)" v-for="(item,index) in menuLists.list">
-        <div class="icon"><img :src="item.icon"> </div>
-        <div>{{item.name}}</div>
+        <div class="icon" v-if="chooseIndex == index"><img :src="item.icon1"></div>
+        <div class="icon" v-if="chooseIndex != index"><img :src="item.icon"></div>
+        <div class="name">{{item.name}}</div>
       </div>
     </div>
   </div>
@@ -61,9 +62,13 @@
         color: #c1c1c1;
         flex: 1;
         .icon{
+          margin-top: -.5rem;
           img{
             width: 30%;
           }
+        }
+        .name{
+          margin-top: -2.7rem;
         }
       }
       .menuListChecked{
