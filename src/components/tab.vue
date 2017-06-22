@@ -48,7 +48,7 @@
     position: fixed;
     bottom: 0;
     .menu {
-      height: 3rem;
+      height: 3.5rem;
       display: flex;
       background: #f5f5f5;
       text-align: center;
@@ -62,7 +62,7 @@
         color: #c1c1c1;
         flex: 1;
         .icon{
-          margin-top: -.5rem;
+          margin-top: -.2rem;
           img{
             width: 30%;
           }

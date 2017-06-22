@@ -2,6 +2,7 @@
   <div class="main">
     <v-search></v-search>
     <v-nav></v-nav>
+    <v-list></v-list>
     <v-tab></v-tab>
   </div>
 
@@ -11,6 +12,7 @@
   import Tab from '../components/tab.vue'
   import Search from '../components/search.vue'
   import Nav from '../components/nav.vue'
+  import List from '../components/list.vue'
   export default{
     created(){
 
@@ -20,7 +22,8 @@
     components: {
       vTab: Tab,
       vSearch:Search,
-      vNav:Nav
+      vNav:Nav,
+      vList:List
     }
   }
 </script>
