@@ -1,17 +1,17 @@
 <template>
 <div class="Register">
   <div class="logo">
-    <img src="https://static.segmentfault.com/v-59410548/global/img/logo-b.svg" />
+    <img src="https://static.segmentfault.com/v-59410548/global/img/logo-b.svg">
   </div>
   <div class="content">
     <div class="name">
-      <input type="text" placeholder="真实姓名或者常用昵称" />
+      <input type="text" placeholder="真实姓名或者常用昵称">
     </div>
     <div class="phone">
-      <input type="text" placeholder="手机号（仅支持大陆手机号）" />
+      <input type="text" placeholder="手机号（仅支持大陆手机号）">
     </div>
     <div class="password">
-      <input type="text" placeholder="密码" />
+      <input type="text" placeholder="密码">
     </div>
   </div>
 

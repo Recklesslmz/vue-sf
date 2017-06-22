@@ -1,7 +1,7 @@
 <template>
   <div class="search">
     <div class="search-input">
-      <input type="text" placeholder="搜索内容、标签和用户"/>
+      <input type="text" placeholder="搜索内容、标签和用户">
     </div>
 
   </div>
