@@ -23,6 +23,16 @@ const actions = {
       .catch(function (error) {
         console.log(error);
       });
+  },
+  [types.GET_ARTICLE_LIST]({commit}){
+    axios.get('/api/article')
+      .then(function (response) {
+        console.log(response.data.data);
+        commit(types.GET_ARTICLE_LIST, response.data.data)
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 }
 

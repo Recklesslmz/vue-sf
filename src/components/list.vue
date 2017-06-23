@@ -1,20 +1,21 @@
 <template>
   <div class="listName">
-    <div class="listDetail" v-for="item in num">
-      <div class="title">Vue2全家桶仿SegmentFault</div>
-      <div class="authors">Reckless&nbsp;&nbsp;&nbsp;6个小时前</div>
+    <div class="listDetail" v-for="item in articleList.list">
+      <div class="title">{{item.title}}</div>
+      <div class="authors">{{item.author}}&nbsp;&nbsp;&nbsp;{{item.time}}</div>
       <div class="icon">
         <img src="http://oqjgod7s1.bkt.clouddn.com/%E8%B5%9E.png"> <span>1</span>
         <img class="comment" src="http://oqjgod7s1.bkt.clouddn.com/%E8%AF%84%E8%AE%BA.png"> <span>1</span>
       </div>
       <div class="articleClass">
-        #前端
+        {{item.classify}}
       </div>
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+  import {mapState} from 'vuex'
   export default {
     data() {
       return {
@@ -22,13 +23,18 @@
       }
     },
     created() {
-
+      this.getInfo()
     },
-    mounted() {
-
+    methods: {
+      getInfo(){
+        this.$store.dispatch('GET_ARTICLE_LIST');
+      }
     },
-    methods: {},
-    computed: {}
+    computed: {
+      ...mapState({
+        articleList: state => state.articleList
+      })
+    }
   }
 </script>
 <style lang="scss">
@@ -46,6 +52,7 @@
           size: 1rem;
           weight: 300;
         }
+        line-height: 1.2rem;
       }
       .authors {
         margin: {

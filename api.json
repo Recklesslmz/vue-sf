@@ -1,6 +1,7 @@
 {
   "tab": {
-    "list": [{
+    "list": [
+      {
         "name": "头条",
         "icon": "http://oqjgod7s1.bkt.clouddn.com/toutiao.png",
         "icon1": "http://oqjgod7s1.bkt.clouddn.com/toutiao0.png"
@@ -27,22 +28,102 @@
       }
     ]
   },
-  "nav":{
-    "list":[
-      {"name":"JavaScript"},
-      {"name":"HTML"},
-      {"name":"CSS"},
-      {"name":"IOS"},
-      {"name":"Android"},
-      {"name":"Vue.js"},
-      {"name":"React.js"},
-      {"name":"Angular.js"},
-      {"name":"Webpack"},
-      {"name":"sass"},
-      {"name":"php"},
-      {"name":"jquery"},
-      {"name":"GitHub"},
-      {"name":"promise"}
+  "nav": {
+    "list": [
+      {
+        "name": "JavaScript"
+      },
+      {
+        "name": "HTML"
+      },
+      {
+        "name": "CSS"
+      },
+      {
+        "name": "IOS"
+      },
+      {
+        "name": "Android"
+      },
+      {
+        "name": "Vue.js"
+      },
+      {
+        "name": "React.js"
+      },
+      {
+        "name": "Angular.js"
+      },
+      {
+        "name": "Webpack"
+      },
+      {
+        "name": "sass"
+      },
+      {
+        "name": "php"
+      },
+      {
+        "name": "jquery"
+      },
+      {
+        "name": "GitHub"
+      },
+      {
+        "name": "promise"
+      }
+    ]
+  },
+  "articleList": {
+    "list": [
+      {
+        "title": "node.js环境搭建与配置的那些坑",
+        "author": "黑百合",
+        "time": "1个小时前",
+        "classify": "#Node"
+      },
+      {
+        "title": "Vue独立构建与运行时构建",
+        "author": "小美",
+        "time": "1个小时前",
+        "classify": "#Vue.js"
+      },
+      {
+        "title": "全栈开发——动手打造属于自己的直播间（Vue+SpringBoot+Nginx）",
+        "author": "士兵76",
+        "time": "1个小时前",
+        "classify": "#Spring"
+      },
+      {
+        "title": "Vue 2.0 项目创建+Element-ui+Less+typescript[巨详细+巨简单+踩过的一些小坑]",
+        "author": "麦克雷",
+        "time": "1个小时前",
+        "classify": "#ElementUI"
+      },
+      {
+        "title": "使用vue和d3.js实现的dialog,messagebox,confirm,alert弹框",
+        "author": "莱因哈特",
+        "time": "1个小时前",
+        "classify": "#Vue.js"
+      },
+      {
+        "title": "Vue2.0全家桶仿腾讯课堂（移动端）",
+        "author": "源氏",
+        "time": "1个小时前",
+        "classify": "#Vue.js"
+      },
+      {
+        "title": "SegmentFault 技术周刊 Vol.27 - Git 学习宝典：程序员走江湖必备",
+        "author": "半藏",
+        "time": "1个小时前",
+        "classify": "#GitHub"
+      },
+      {
+        "title": "怎么解决webstorm被限制读写权限问题。",
+        "author": "狂鼠",
+        "time": "1个小时前",
+        "classify": "#Webstorm"
+      }
     ]
   }
 }

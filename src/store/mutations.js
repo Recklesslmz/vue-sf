@@ -8,6 +8,9 @@ const mutations = {
   },
   [types.NAV_TAB_LIST](state,info){
     state.navList = info
+  },
+  [types.GET_ARTICLE_LIST](state,info){
+    state.articleList = info
   }
 
 }
