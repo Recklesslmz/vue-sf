@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <transition name="slide-fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -9,5 +11,15 @@
 </script>
 
 <style lang="scss">
+  .slide-fade-enter-active {
+    transition: opacity .3s ease;
+  }
 
+  .slide-fade-leave-active {
+    transition: opacity .3s ease;
+  }
+
+  .slide-fade-enter, .slide-fade-leave-active {
+    opacity: 0;
+  }
 </style>
