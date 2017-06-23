@@ -3,7 +3,7 @@
     <v-search></v-search>
     <v-nav></v-nav>
     <v-list></v-list>
-    <v-tab></v-tab>
+    <v-tab :propTab="propTab"></v-tab>
   </div>
 
 </template>
@@ -14,6 +14,11 @@
   import Nav from '../components/nav.vue'
   import List from '../components/list.vue'
   export default{
+    data(){
+      return {
+        propTab: 0
+      }
+    },
     created(){
 
     },
@@ -21,9 +26,9 @@
     computed: {},
     components: {
       vTab: Tab,
-      vSearch:Search,
-      vNav:Nav,
-      vList:List
+      vSearch: Search,
+      vNav: Nav,
+      vList: List
     }
   }
 </script>

@@ -1,14 +1,14 @@
 <template>
 <div class="Login">
   <div class="logo">
-    <img src="https://static.segmentfault.com/v-59410548/global/img/logo-b.svg" />
+    <img src="https://static.segmentfault.com/v-59410548/global/img/logo-b.svg">
   </div>
   <div class="content">
     <div class="phone">
-      <input type="text" placeholder="Email/手机号" />
+      <input type="text" placeholder="Email/手机号">
     </div>
     <div class="password">
-      <input type="text" placeholder="密码" />
+      <input type="text" placeholder="密码" >
     </div>
   </div>
 
@@ -22,11 +22,11 @@
     <div class="line"></div>
   </div>
   <div class="thirdWayLogo">
-    <div><img src="http://oqjgod7s1.bkt.clouddn.com/weixinsf.png" /></div>
-    <div> <img src="http://oqjgod7s1.bkt.clouddn.com/qqsf.png" /></div>
-    <div> <img src="http://oqjgod7s1.bkt.clouddn.com/weibosf.png" /></div>
-    <div><img src="http://oqjgod7s1.bkt.clouddn.com/googlesf.png" /></div>
-    <div> <img src="http://oqjgod7s1.bkt.clouddn.com/githubsf.png" /></div>
+    <div><img src="http://oqjgod7s1.bkt.clouddn.com/weixinsf.png"></div>
+    <div> <img src="http://oqjgod7s1.bkt.clouddn.com/qqsf.png"></div>
+    <div> <img src="http://oqjgod7s1.bkt.clouddn.com/weibosf.png"></div>
+    <div><img src="http://oqjgod7s1.bkt.clouddn.com/googlesf.png"></div>
+    <div> <img src="http://oqjgod7s1.bkt.clouddn.com/githubsf.png"></div>
   </div>
 </div>
 </template>

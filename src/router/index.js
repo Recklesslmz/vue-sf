@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Register from '../page/register'
 import Login from '../page/login'
 import Main from '../page/main'
+import My from '../page/my'
 
 Vue.use(Router)
 
@@ -35,6 +36,15 @@ export default new Router({
                 document.getElementsByTagName('body')[0].style.background = '#fff'
                 next()
 
+            }
+        },
+        {
+            path: '/My',
+            name: 'My',
+            component: My,
+            beforeEnter: (to, from, next) => {
+                document.getElementsByTagName('body')[0].style.background = '#f2f2f2'
+                next()
             }
         }
     ]
