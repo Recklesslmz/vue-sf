@@ -2,7 +2,7 @@
   <div class="my">
     <div>
       <v-header></v-header>
-      <div class="top">
+      <div class="top" @click='toMyInfo'>
         <div class="avatar"><img src="http://oqjgod7s1.bkt.clouddn.com/vue.png"></div>
         <div class="name">segmentFault</div>
         <div class="iconRight"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
@@ -48,13 +48,17 @@
   export default {
     data(){
       return {
-        propTab: 4
+        propTab: 4,
       }
     },
     created(){
 
     },
-    methods: {},
+    methods: {
+      toMyInfo(){
+        this.$router.push({path: '/myInfo'})
+      }
+    },
     components: {
       vHeader: Header,
       vTab: Tab
