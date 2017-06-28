@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="91a5b9f2-4783-4cfd-8fe0-cc15b5549445" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api.json" afterPath="$PROJECT_DIR$/api.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/dev-server.js" afterPath="$PROJECT_DIR$/build/dev-server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/myInfo.vue" afterPath="$PROJECT_DIR$/src/page/myInfo.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/actions.js" afterPath="$PROJECT_DIR$/src/store/actions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/mutations.js" afterPath="$PROJECT_DIR$/src/store/mutations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/sf-type.js" afterPath="$PROJECT_DIR$/src/store/sf-type.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/state.js" afterPath="$PROJECT_DIR$/src/store/state.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,6 +39,16 @@
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myInfo.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/page/myInfo.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="51" column="16" lean-forward="true" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -111,10 +115,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="label.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="label.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/label.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
+            <state relative-caret-position="931">
               <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
               <folding />
             </state>
@@ -167,7 +171,6 @@
         <option value="$PROJECT_DIR$/src/components/search.vue" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="$PROJECT_DIR$/src/page/my.vue" />
-        <option value="$PROJECT_DIR$/src/page/myInfo.vue" />
         <option value="$PROJECT_DIR$/api.json" />
         <option value="$PROJECT_DIR$/src/store/sf-type.js" />
         <option value="$PROJECT_DIR$/src/store/mutations.js" />
@@ -175,6 +178,7 @@
         <option value="$PROJECT_DIR$/src/store/actions.js" />
         <option value="$PROJECT_DIR$/build/dev-server.js" />
         <option value="$PROJECT_DIR$/src/components/label.vue" />
+        <option value="$PROJECT_DIR$/src/page/myInfo.vue" />
       </list>
     </option>
   </component>
@@ -465,12 +469,12 @@
       <workItem from="1498528518050" duration="1080000" />
       <workItem from="1498554777826" duration="1544000" />
       <workItem from="1498574893120" duration="1766000" />
-      <workItem from="1498619216065" duration="14205000" />
+      <workItem from="1498619216065" duration="15399000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56987000" />
+    <option name="totallyTimeSpent" value="58181000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -769,14 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/myInfo.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="49" column="48" lean-forward="false" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -894,8 +890,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/label.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
+        <state relative-caret-position="931">
           <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/myInfo.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="51" column="16" lean-forward="true" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
           <folding />
         </state>
       </provider>

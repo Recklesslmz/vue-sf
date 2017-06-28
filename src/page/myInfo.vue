@@ -44,34 +44,39 @@
     <div class="tabbottom" :class="chooseTab"></div>
 
     <div class="main" :class="chooseTab">
-      <div class="tab-main" v-if="currentIndex === 0">
-        <div class="personalWeb">
-          <div class="latestName">个人网站</div>
-          <div class="latestDesc">www.recklesslmz.com</div>
-        </div>
-        <div class="personalWeb">
-          <div class="latestName">我的动态</div>
-          <div class="latestIcon"><span>6</span><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
-        </div>
-        <div class="msg">
-          <div class="msgList" v-for="item in infoList">
-            <div class="msgName">{{item.name}}</div>
-            <div class="msgIcon"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
+      <transition name="fade">
+        <div class="tab-main" v-if="currentIndex === 0">
+          <div class="personalWeb">
+            <div class="latestName">个人网站</div>
+            <div class="latestDesc">www.recklesslmz.com</div>
+          </div>
+          <div class="personalWeb">
+            <div class="latestName">我的动态</div>
+            <div class="latestIcon"><span>6</span><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
+          </div>
+          <div class="msg">
+            <div class="msgList" v-for="item in infoList">
+              <div class="msgName">{{item.name}}</div>
+              <div class="msgIcon"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
+            </div>
+          </div>
+          <div>
+            <v-table></v-table>
           </div>
         </div>
-        <div>
-          <v-table></v-table>
-        </div>
-      </div>
-      <div class="tab-personal" v-if="currentIndex === 1">
-        <div class="msg">
-          <div class="msgList" v-for="item in infoList">
-            <div class="msgName">{{item.name}}</div>
-            <div class="msgIcon"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
+      </transition>
+      <transition name="fade">
+        <div class="tab-personal" v-if="currentIndex === 1">
+          <div class="msg">
+            <div class="msgList" v-for="item in infoList">
+              <div class="msgName">{{item.name}}</div>
+              <div class="msgIcon"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
+            </div>
           </div>
         </div>
-      </div>
+      </transition>
     </div>
+
   </div>
 </template>
 
@@ -124,6 +129,21 @@
 </script>
 <style lang="scss">
   .myInfo {
+    /*.fade-enter-active, .fade-leave-active {*/
+    /*transition: opacity .375s*/
+    /*}*/
+    /*.fade-enter, .fade-leave-to !* .fade-leave-active in <2.1.8 *!*/
+    /*{*/
+    /*opacity: .5*/
+    /*}*/
+
+    .component-fade-enter-active, .component-fade-leave-active {
+      transition: opacity .5s ease;
+    }
+    .component-fade-enter, .component-fade-leave-active {
+      opacity: .5;
+    }
+
     .back {
       position: absolute;
       z-index: 999;
@@ -253,11 +273,12 @@
       }
     }
     .main {
-      transition: all 0.375s;
+      /*transition: all 0.375s;*/
       &.chooseTab0 {
-        transform: translate3d(0, 0, 0);
+        /*transform: translate3d(0, 0, 0)*/
       }
       &.chooseTab1 {
+
       }
       .personalWeb {
         margin-top: .5rem;
