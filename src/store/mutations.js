@@ -11,6 +11,9 @@ const mutations = {
   },
   [types.GET_ARTICLE_LIST](state,info){
     state.articleList = info
+  },
+  [types.GET_LABEL_LIST](state,info){
+    state.labelList = info
   }
 
 }

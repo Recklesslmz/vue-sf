@@ -125,5 +125,41 @@
         "classify": "#Webstorm"
       }
     ]
+  },
+  "labelList": {
+    "list": [
+      {
+        "title": "vue.js",
+        "num": "190"
+      },
+      {
+        "title": "javascript",
+        "num": "190"
+      },
+      {
+        "title": "vue-cli",
+        "num": "190"
+      },
+      {
+        "title": "css3",
+        "num": "190"
+      },
+      {
+        "title": "webpack",
+        "num": "190"
+      },
+      {
+        "title": "前端开发工程化",
+        "num": "190"
+      },
+      {
+        "title": "vue-resource",
+        "num": "190"
+      },
+      {
+        "title": "vue-router",
+        "num": "190"
+      }
+    ]
   }
 }

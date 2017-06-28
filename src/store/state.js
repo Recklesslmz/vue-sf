@@ -4,6 +4,7 @@
 const state = {
   menuList: {},
   navList: {},
-  articleList: {}
+  articleList: {},
+  labelList: {}
 }
 export default state

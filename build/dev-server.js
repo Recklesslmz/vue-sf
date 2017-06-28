@@ -27,6 +27,7 @@ var appData = require('../api.json')
 var tab = appData.tab
 var nav = appData.nav
 var article = appData.articleList
+var labelList = appData.labelList
 
 
 var apiRoutes = express.Router()
@@ -48,6 +49,12 @@ apiRoutes.get('/article', function (req, res) {
   res.json({
     errno: 0,
     data: article
+  });
+})
+apiRoutes.get('/labelList', function (req, res) {
+  res.json({
+    errno: 0,
+    data: labelList
   });
 })
 

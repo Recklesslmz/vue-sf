@@ -33,6 +33,16 @@ const actions = {
       .catch(function (error) {
         console.log(error);
       });
+  },
+  [types.GET_LABEL_LIST]({commit}){
+    axios.get('/api/labelList')
+      .then(function (response) {
+        console.log(response.data.data);
+        commit(types.GET_LABEL_LIST, response.data.data)
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 }
 
