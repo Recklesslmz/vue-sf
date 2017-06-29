@@ -1,30 +1,26 @@
 # vue-sf
 
-> vue-segmentFault
+> vue-segmentFault 仿照segmentFault的App外观做的一个小项目
+
+# 技术栈
+
+> vue-cli + vue-router + vuex + axios
+
+# 项目部分截图
+
+![GitHub](http://oqjgod7s1.bkt.clouddn.com/WechatIMG359.jpeg?v=3&s=100 "GitHub,Social Coding")
+![GitHub](http://oqjgod7s1.bkt.clouddn.com/WechatIMG360.jpeg?v=3&s=100 "GitHub,Social Coding")
+![GitHub](http://oqjgod7s1.bkt.clouddn.com/WechatIMG361.jpeg?v=3&s=100 "GitHub,Social Coding")
+![GitHub](http://oqjgod7s1.bkt.clouddn.com/WechatIMG362.jpeg?v=3&s=100 "GitHub,Social Coding")
+![GitHub](http://oqjgod7s1.bkt.clouddn.com/WechatIMG363.jpeg?v=3&s=100 "GitHub,Social Coding")
 
 ## Build Setup
 
 ``` bash
-# install dependencies
+# 下载依赖（建议使用淘宝镜像）
 npm install
 
-# serve with hot reload at localhost:8080
+# 启动项目本地端口号为8080 localhost:8080
 npm run dev
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
