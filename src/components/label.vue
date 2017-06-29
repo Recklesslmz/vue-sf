@@ -1,11 +1,12 @@
 <template>
   <div class="Label">
     <div class="labelTag">活跃标签</div>
-    <div>
+    <div class="labelMain">
       <div class="tagName" v-for="item in labelList.list">
         <div class="tagClass">{{item.title}}</div>
         <div class="tagNum">{{item.num}}</div>
       </div>
+      <div class="s-clear"></div>
     </div>
   </div>
 
@@ -34,6 +35,10 @@
 
 </script>
 <style lang="scss">
+  .s-clear {
+    clear: both;
+  }
+
   .Label {
     margin: {
       top: 1rem;
@@ -48,6 +53,17 @@
         weight: 300;
       }
     ;
+    }
+    .labelMain {
+      margin: {
+        top: .5rem;
+      }
+    ;
+      background: #fff;
+      padding:{
+        top:.5rem;
+        bottom: 1rem;
+      };
     }
     .tagName {
       float: left;
