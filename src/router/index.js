@@ -6,7 +6,7 @@ import Main from '../page/main'
 import My from '../page/my'
 import myInfo from  '../page/myInfo'
 import article from '../page/article'
-
+import message from '../page/message.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -62,6 +62,15 @@ export default new Router({
       path: '/article',
       name: 'article',
       component: article,
+      beforeEnter: (to, from, next) => {
+        document.getElementsByTagName('body')[0].style.background = '#fff'
+        next()
+      }
+    },
+    {
+      path: '/message',
+      name: 'message',
+      component: message,
       beforeEnter: (to, from, next) => {
         document.getElementsByTagName('body')[0].style.background = '#fff'
         next()
