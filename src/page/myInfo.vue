@@ -23,15 +23,15 @@
       </div>
       <div class="menulist">
         <div class="list listright">
-          <div>999</div>
+          <div>123</div>
           <div>声望</div>
         </div>
         <div class="list listright">
-          <div>999</div>
+          <div>456</div>
           <div>关注</div>
         </div>
         <div class="list">
-          <div>999</div>
+          <div>789</div>
           <div>粉丝</div>
         </div>
       </div>

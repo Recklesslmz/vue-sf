@@ -5,6 +5,7 @@ import Login from '../page/login'
 import Main from '../page/main'
 import My from '../page/my'
 import myInfo from  '../page/myInfo'
+import article from '../page/article'
 
 Vue.use(Router)
 
@@ -54,6 +55,15 @@ export default new Router({
       component: myInfo,
       beforeEnter: (to, from, next) => {
         document.getElementsByTagName('body')[0].style.background = '#f2f2f2'
+        next()
+      }
+    },
+    {
+      path: '/article',
+      name: 'article',
+      component: article,
+      beforeEnter: (to, from, next) => {
+        document.getElementsByTagName('body')[0].style.background = '#fff'
         next()
       }
     }

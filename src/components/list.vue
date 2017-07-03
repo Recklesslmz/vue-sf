@@ -1,6 +1,6 @@
 <template>
   <div class="listName">
-    <div class="listDetail" v-for="item in articleList.list">
+    <div class="listDetail" @click="toArticle" v-for="item in articleList.list">
       <div class="title">{{item.title}}</div>
       <div class="authors">{{item.author}}&nbsp;&nbsp;&nbsp;{{item.time}}</div>
       <div class="icon">
@@ -19,7 +19,7 @@
   export default {
     data() {
       return {
-        num: 10
+        num: 10,
       }
     },
     created() {
@@ -28,6 +28,9 @@
     methods: {
       getInfo(){
         this.$store.dispatch('GET_ARTICLE_LIST');
+      },
+      toArticle(){
+        this.$router.push({path: '/article'})
       }
     },
     computed: {

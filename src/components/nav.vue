@@ -1,6 +1,6 @@
 <template>
-  <div class="nav">
-    <div class="navSub" ref="wrapper">
+  <div class="nav" ref="wrapper">
+    <div class="navSub" ref="navSub">
       <div :class="[navList,{chooseNav:chooseIndex == index}]" @click='chooseIndexNav(index)'
            v-for="(item,index) in navLists.list">
         {{item.name}}
@@ -22,8 +22,7 @@
     created() {
       this.getInfo()
     },
-    mounted() {
-
+    mounted(){
     },
     methods: {
       getInfo() {
