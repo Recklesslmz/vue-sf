@@ -23,13 +23,16 @@
     data(){
       return {
         bindIndex: '',
-        notice: '12222'
+        notice:{
+            noticeIndex:''
+        }
       }
 
     },
     methods: {
       currentIndex(index){
         this.bindIndex = index
+        this.notice.noticeIndex = index
       }
     },
     components: {
