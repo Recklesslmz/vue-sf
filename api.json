@@ -161,5 +161,80 @@
         "num": "190"
       }
     ]
+  },
+  "noticeList": {
+    "listF": [
+      {
+        "name": "布奈丶",
+        "article": "Vue的数据绑定部分的简要过程解释",
+        "type": "收藏了你的文章"
+      },
+      {
+        "name": "王下邀月熊_Chevalier",
+        "article": "LocalMQ：从零构建类 RocketMQ 高性能消息队列",
+        "type": "收藏了你的文章"
+      },
+      {
+        "name": "MageekChiu",
+        "article": "Nodejs中的一些小trick",
+        "type": "收藏了你的文章"
+      },
+      {
+        "name": "布奈丶",
+        "article": "Vue的数据绑定部分的简要过程解释",
+        "type": "收藏了你的文章"
+      },
+      {
+        "name": "boxsnake",
+        "article": " export default new Vue({}) 在Vue-router中数据绑定失效的问题 ",
+        "type": "回答了问题"
+      },
+      {
+        "name": "答案在风中飘着",
+        "article": "vue 模板里获取多层嵌套的数据问题",
+        "type": "邀请你问答问题"
+      },
+      {
+        "name": "JUST_ ",
+        "article": "关于vue项目部署到ngnix后出现的问题",
+        "type": "修改了你回答过的问题"
+      },
+      {
+        "name": "ClearLove ",
+        "article": "HTML编码规范建议",
+        "type": "回复了你的评论"
+      }
+    ],
+    "listS": [
+      {
+        "name": "Reckless ",
+        "article": " 使用vue-cli初始化项目"
+      },
+      {
+        "name": "Reckless ",
+        "article": "Vue 属性循环数组对象如何赋值属性？"
+      },
+      {
+        "name": "Reckless ",
+        "article": " vuejs 如何给option 添加点击事件"
+      }
+    ],
+    "listT": [
+      {
+        "name": "Reckless",
+        "time": "1天前",
+        "type": "1"
+      },
+      {
+        "name": "ciqulover",
+        "time": "10天前",
+        "type": "0"
+      },
+      {
+        "name": "迪丽热巴",
+        "time": "1年前",
+        "type": "1"
+      }
+    ]
   }
 }

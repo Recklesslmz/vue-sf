@@ -5,6 +5,8 @@ const state = {
   menuList: {},
   navList: {},
   articleList: {},
-  labelList: {}
+  labelList: {},
+  messageList:{}
+
 }
 export default state

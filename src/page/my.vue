@@ -12,7 +12,7 @@
         <div class="latestIcon"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
       </div>
       <div class="msg">
-        <div class="msgList">
+        <div class="msgList" @click='toNext(2)'>
           <div class="msgName">我的消息</div>
           <div class="msgIcon"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
         </div>
@@ -57,6 +57,13 @@
     methods: {
       toMyInfo(){
         this.$router.push({path: '/myInfo'})
+      },
+      toNext(index){
+        switch (index) {
+          case 2:
+            this.$router.push({path: '/message'})
+            break
+        }
       }
     },
     components: {

@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-header v-on:currentIndex="currentIndex"></v-header>
-    <div>
+    <div class="noticeMain">
       <div v-if="bindIndex === 0">
         <v-notice :notice="notice"></v-notice>
       </div>
@@ -23,8 +23,8 @@
     data(){
       return {
         bindIndex: '',
-        notice:{
-            noticeIndex:''
+        notice: {
+          noticeIndex: ''
         }
       }
 
@@ -43,5 +43,8 @@
 
 </script>
 <style lang="scss">
+  .noticeMain {
+    margin-top: 3.5rem;
+  }
 
 </style>

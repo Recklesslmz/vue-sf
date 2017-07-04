@@ -1,7 +1,7 @@
 <template>
   <div class="messageHeader">
     <div class="back">
-      <img src="http://om10u3y7b.bkt.clouddn.com/left.png">
+      <img @click="back" src="http://om10u3y7b.bkt.clouddn.com/left.png">
     </div>
     <div class="mid-menu">
       <div :class="['list',{listChecked:chooseIndex === index}]" v-for="(item,index) in midMenuList"
@@ -27,10 +27,16 @@
         chooseIndex: '',
       }
     },
+    created(){
+      this.chooseMenu(0)
+    },
     methods: {
       chooseMenu(index){
         this.chooseIndex = index
         this.$emit("currentIndex", index)
+      },
+      back(){
+        this.$router.go(-1)
       }
     }
   }
@@ -41,8 +47,11 @@
     width: 100%;
     height: 3rem;
     background: #159963;
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: space-between;
+    z-index: 99;
     .back {
       img {
         width: 1.7rem;

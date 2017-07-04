@@ -1,36 +1,37 @@
 <template>
   <div>
     <div v-if="notice.noticeIndex===0">
-      <div class="notice" v-for="item in num">
+      <div class="notice" v-for="item in messageList.listF">
         <div class="noticeNav">
-          <div class="userName"><span>小明</span>评价了你的答案</div>
+          <div class="userName"><span>{{item.name}}</span>{{item.type}}</div>
           <div class="noticeTime">1分钟前</div>
         </div>
         <div class="noticeArticle">
-          <div class="articleName">vue全家桶仿segmentFault前端开发</div>
+          <div class="articleName">{{item.article}}</div>
         </div>
       </div>
     </div>
     <div v-if="notice.noticeIndex===1">
-      <div class="notice" v-for="item in num">
+      <div class="notice" v-for="item in messageList.listS">
         <div class="noticeNav">
-          <div class="userName"><span>小明</span>评价了你的答案</div>
+          <div class="userName"><span>{{item.name}}</span>点赞了你的答案</div>
           <div class="noticeTime">1分钟前</div>
         </div>
         <div class="noticeArticle">
-          <div class="articleName">vue全家桶仿segmentFault前端开发</div>
+          <div class="articleName">{{item.article}}</div>
           <div class="articlePoint">+15</div>
         </div>
       </div>
     </div>
     <div v-if="notice.noticeIndex===2">
-      <div class="noticeFocus" v-for="item in num">
+      <div class="noticeFocus" v-for="item in messageList.listT">
         <div class="avatar">
           <img src="https://sfault-avatar.b0.upaiyun.com/357/506/3575066146-5949b8b0e8f01_huge256">
         </div>
         <div class="name">
-          <div class="name-focus"><span class="name-username">Recklesslmz</span><span class="focussu">关注了你</span></div>
-          <div class="time">1天前</div>
+          <div class="name-focus"><span class="name-username">{{item.name}}</span><span class="focussu">关注了你</span>
+          </div>
+          <div class="time">{{item.time}}</div>
         </div>
         <div class="btn">
           <button>关注</button>
@@ -41,14 +42,23 @@
 </template>
 
 <script type="text/ecmascript-6">
+  import {mapState} from 'vuex'
   export default{
     props: {
       notice: Object
+    },
+    mounted(){
+      this.$store.dispatch('GET_MESSAGE_LIST')
     },
     data(){
       return {
         num: 10
       }
+    },
+    computed: {
+      ...mapState({
+        messageList: state => state.messageList
+      })
     }
   }
 </script>
@@ -93,6 +103,8 @@
       .articleName {
         position: relative;
         left: .5rem;
+        width: 90%;
+        line-height: 1.4rem;
       }
       .articlePoint {
         width: 2rem;
