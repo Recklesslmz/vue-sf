@@ -208,15 +208,18 @@
     "listS": [
       {
         "name": "Reckless ",
-        "article": " 使用vue-cli初始化项目"
+        "article": " 使用vue-cli初始化项目",
+        "point": "+10"
       },
       {
         "name": "Reckless ",
-        "article": "Vue 属性循环数组对象如何赋值属性？"
+        "article": "Vue 属性循环数组对象如何赋值属性？",
+        "point": "+15"
       },
       {
         "name": "Reckless ",
         "article": " vuejs 如何给option 添加点击事件"
+        "point": "+5"
       }
     ],
     "listT": [
@@ -226,12 +229,12 @@
         "type": "1"
       },
       {
-        "name": "ciqulover",
+        "name": "test",
         "time": "10天前",
         "type": "0"
       },
       {
-        "name": "迪丽热巴",
+        "name": "demo",
         "time": "1年前",
         "type": "1"
       }
