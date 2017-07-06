@@ -22,4 +22,5 @@
   .slide-fade-enter, .slide-fade-leave-active {
     opacity: 0;
   }
+
 </style>

@@ -34,7 +34,7 @@
           <div class="time">{{item.time}}</div>
         </div>
         <div class="btn">
-          <button>关注</button>
+          <button :class="[{attention:item.type === '1'}]">{{item.type === '1' ? '互相关注' : '关注'}}</button>
         </div>
       </div>
     </div>
@@ -118,6 +118,7 @@
       ;
         line-height: 1rem;
         position: relative;
+        top: .2rem;
         right: .5rem;
       }
     }
@@ -189,6 +190,11 @@
         }
       ;
         border: 1px solid #159963;
+      }
+      .attention {
+        background: #e5e5e5;
+        color: #a5a5a5;
+        border: 1px solid #e5e5e5;
       }
     }
   }

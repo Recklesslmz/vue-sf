@@ -9,11 +9,12 @@ import common from './common/js/common'
 import store from './store/index'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/googlecode.css'
+import './assets/css/animate.css'
 Vue.prototype.commonUrl = common
 Vue.prototype.$http = axios
-Vue.directive('highlight',function (el) {
+Vue.directive('highlight', function (el) {
   let blocks = el.querySelectorAll('pre code');
-  blocks.forEach((block)=>{
+  blocks.forEach((block) => {
     hljs.highlightBlock(block)
   })
 })
