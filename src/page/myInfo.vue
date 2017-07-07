@@ -52,12 +52,13 @@
           </div>
           <div class="personalWeb">
             <div class="latestName">我的动态</div>
-            <div class="latestIcon"><span>6</span><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
+            <div class="latestIcon"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
           </div>
           <div class="msg">
-            <div class="msgList" v-for="item in infoList">
+            <div class="msgList" @click='toNext(item.mark)' v-for="item in infoList">
               <div class="msgName">{{item.name}}</div>
-              <div class="msgIcon"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
+              <div class="msgIcon"><span>{{item.num}}</span><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png">
+              </div>
             </div>
           </div>
           <div>
@@ -96,12 +97,12 @@
           {name: '个人档案'}
         ],
         infoList: [
-          {name: '我的提问'},
-          {name: '我的回答'},
-          {name: '我的文章'},
-          {name: '我的分享'},
-          {name: '我的收藏'},
-          {name: '我的讲座'},
+          {name: '我的提问', num: 2, mark: 1},
+          {name: '我的回答', num: 30, mark: 2},
+          {name: '我的文章', num: 6, mark: 3},
+          {name: '我的分享', num: 2, mark: 4},
+          {name: '我的收藏', num: 4, mark: 5},
+          {name: '我的讲座', num: 0, mark: 6},
         ]
       }
     },
@@ -114,10 +115,26 @@
         switch (index) {
           case 0:
             this.chooseTab = 'chooseTab0'
-            break
+            break;
           case 1:
             this.chooseTab = 'chooseTab1'
-            break
+            break;
+        }
+      },
+      toNext(index){
+        console.log(index)
+        switch (index) {
+          case 1:
+            break;
+          case 3:
+            break;
+          case 4:
+            break;
+          case 5:
+            break;
+          case 6:
+            this.$router.push({path: '/lecture'})
+            break;
         }
       },
       back(){
@@ -129,14 +146,6 @@
 </script>
 <style lang="scss">
   .myInfo {
-    /*.fade-enter-active, .fade-leave-active {*/
-    /*transition: opacity .375s*/
-    /*}*/
-    /*.fade-enter, .fade-leave-to !* .fade-leave-active in <2.1.8 *!*/
-    /*{*/
-    /*opacity: .5*/
-    /*}*/
-
     .component-fade-enter-active, .component-fade-leave-active {
       transition: opacity .5s ease;
     }
@@ -273,6 +282,7 @@
       }
     }
     .main {
+      margin-top: .5rem;
       /*transition: all 0.375s;*/
       &.chooseTab0 {
         /*transform: translate3d(0, 0, 0)*/
@@ -339,6 +349,9 @@
               position: relative;
               top: .4rem;
               width: 1.5rem;
+            }
+            span {
+              color: #aaa;
             }
           }
         }

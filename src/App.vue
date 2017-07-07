@@ -11,6 +11,8 @@
 </script>
 
 <style lang="scss">
+
+
   .slide-fade-enter-active {
     transition: opacity .3s ease;
   }
@@ -23,4 +25,7 @@
     opacity: 0;
   }
 
+  .main {
+    margin-top: 3rem;
+  }
 </style>
