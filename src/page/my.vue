@@ -1,9 +1,10 @@
 <template>
   <div class="my">
     <div>
-      <v-header></v-header>
+      <v-header :headerProps="headerProps"></v-header>
       <div class="top" @click='toMyInfo'>
-        <div class="avatar"><img src="http://oqjgod7s1.bkt.clouddn.com/vue.png"></div>
+        <div class="avatar"><img src="https://sfault-avatar.b0.upaiyun.com/357/506/3575066146-5949b8b0e8f01_huge256">
+        </div>
         <div class="name">segmentFault</div>
         <div class="iconRight"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
       </div>
@@ -26,7 +27,7 @@
           <div class="msgName">我的关注</div>
           <div class="msgIcon"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
         </div>
-        <div class="msgList">
+        <div class="msgList" @click='toNext(5)'>
           <div class="msgName">我的收藏</div>
           <div class="msgIcon"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
         </div>
@@ -46,9 +47,14 @@
   import Header from '../components/header'
   import Tab from '../components/tab'
   export default {
+
     data(){
       return {
         propTab: 4,
+        headerProps: {
+          name: '我的',
+          isBack: false
+        }
       }
     },
     created(){
@@ -62,7 +68,10 @@
         switch (index) {
           case 2:
             this.$router.push({path: '/message'})
-            break
+            break;
+          case 5:
+            this.$router.push({path: '/collection'})
+            break;
         }
       }
     },
@@ -98,6 +107,7 @@
       ;
         img {
           width: 3rem;
+          border-radius: 50%;
         }
       }
       .name {
