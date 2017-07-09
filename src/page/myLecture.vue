@@ -29,6 +29,9 @@
         chooseIndex: ''
       }
     },
+    created(){
+       this.chooseTab(0)
+    },
     methods: {
       chooseTab(index){
         this.chooseIndex = index
