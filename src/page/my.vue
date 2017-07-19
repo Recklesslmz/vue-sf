@@ -5,7 +5,7 @@
       <div class="top" @click='toMyInfo'>
         <div class="avatar"><img src="https://sfault-avatar.b0.upaiyun.com/357/506/3575066146-5949b8b0e8f01_huge256">
         </div>
-        <div class="name">segmentFault</div>
+        <div class="name">Reckless</div>
         <div class="iconRight"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
       </div>
       <div class="latest">
@@ -57,9 +57,6 @@
         }
       }
     },
-    created(){
-
-    },
     methods: {
       toMyInfo(){
         this.$router.push({path: '/myInfo'})
@@ -68,10 +65,10 @@
         switch (index) {
           case 2:
             this.$router.push({path: '/message'})
-            break;
+            break
           case 5:
             this.$router.push({path: '/collection'})
-            break;
+            break
         }
       }
     },
@@ -79,47 +76,33 @@
       vHeader: Header,
       vTab: Tab
     }
-
   }
 </script>
 
 <style lang='scss'>
   .my {
     .top {
-      width: 100%;
-      height: 5rem;
-      margin: {
-        top: 3rem;
-      }
-    ;
-      border: {
-        bottom: 1px solid #dedede;
-      }
-    ;
-      background: #fff;
       display: flex;
       justify-content: space-between;
+      margin: 3rem 0 0 0;
+      width: 100%;
+      height: 5rem;
+      border-bottom: 1px solid #dedede;
+      background: #fff;
       .avatar {
-        padding: {
-          top: 1rem;
-          left: .5rem;
-        }
-      ;
+        padding: 1rem 0 0 .5rem;
         img {
           width: 3rem;
           border-radius: 50%;
         }
       }
       .name {
-        font: {
-          size: 1.3rem;
-        }
-      ;
         position: relative;
         left: 1rem;
         flex: 5;
-        color: #000;
         line-height: 5rem;
+        font-size: 1.3rem;
+        color: #000;
       }
       .iconRight {
         line-height: 6rem;
@@ -129,17 +112,16 @@
       }
     }
     .latest {
+      display: flex;
+      justify-content: space-between;
       margin-top: .5rem;
       border: {
         top: 1px solid #dedede;
         bottom: 1px solid #dedede;
       }
-    ;
       height: 3rem;
       width: 100%;
       background: #fff;
-      display: flex;
-      justify-content: space-between;
       div {
         line-height: 3rem;
       }
@@ -158,15 +140,12 @@
     .msg {
       margin-top: .5rem;
       .msgList {
-        border: {
-          bottom: 1px solid #dedede;
-        }
-      ;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #dedede;
         height: 3rem;
         width: 100%;
         background: #fff;
-        display: flex;
-        justify-content: space-between;
         div {
           line-height: 3rem;
         }
@@ -184,5 +163,4 @@
       }
     }
   }
-
 </style>

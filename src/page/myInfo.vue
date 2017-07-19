@@ -37,7 +37,7 @@
       </div>
     </div>
     <div class="tabName">
-      <div :class="[tablist,{menuChoose:currentIndex === index}]" v-for="(item,index) in chooseMenu"
+      <div :class="['tablist',{menuChoose:currentIndex === index}]" v-for="(item,index) in chooseMenu"
            @click="choose(index)">{{item.name}}
       </div>
     </div>
@@ -91,7 +91,6 @@
       return {
         chooseTab: '',
         currentIndex: '',
-        tablist: 'tablist',
         chooseMenu: [
           {name: '个人主页'},
           {name: '个人档案'}
@@ -155,9 +154,9 @@
 
     .back {
       position: absolute;
-      z-index: 999;
       top: .5rem;
       left: .5rem;
+      z-index: 999;
       width: 6%;
     }
     .top {
@@ -168,9 +167,9 @@
 
     }
     .topDetail {
-      width: 100%;
       position: absolute;
       top: 2rem;
+      width: 100%;
     }
     .avatar {
       text-align: center;
@@ -186,19 +185,14 @@
       margin: {
         top: 1rem;
       }
-    ;
       font: {
         size: 1.2rem;
       }
-    ;
     }
     .medal {
       display: flex;
       justify-content: center;
-      margin: {
-        top: .5rem;
-      }
-    ;
+      margin-top: .5rem;
       div {
         width: 55px;
         justify-content: center;
@@ -207,26 +201,20 @@
           width: 55%;
         }
         span {
-          color: #fff;
           position: relative;
           top: -.6rem;
           font: {
             size: .9rem;
             weight: 300;
           }
-        ;
+          color: #fff;
         }
       }
     }
-  ;
-
     .menulist {
       display: flex;
+      margin-top: .5rem;
       text-align: center;
-      margin: {
-        top: .5rem;
-      }
-    ;
       .list {
         flex: 1;
         color: #fff;
@@ -244,29 +232,24 @@
         }
       }
     }
-  ;
     .menuChoose {
       color: #159963 !important;
     }
     .tabName {
+      display: flex;
+      justify-content: center;
+      margin-top: .3rem;
+      text-align: center;
       width: 100%;
       height: 3rem;
       background: #fff;
-      justify-content: center;
-      margin: {
-        top: .3rem;
-      }
-    ;
-      display: flex;
-      text-align: center;
       .tablist {
         justify-content: center;
-        color: #a4a5a4;
-        width: 100px;
         line-height: 3rem;
+        width: 100px;
         transition: all 0.375s;
+        color: #a4a5a4;
       }
-
     }
     .tabbottom {
       width: 100px;
@@ -274,34 +257,25 @@
       transition: all 0.375s;
       margin-left: 107px;
       &.chooseTab0 {
-        transform: translate3d(0, 0, 0)
+        transform: translateX(0)
       }
       &.chooseTab1 {
-        transform: translate3d(100%, 0, 0)
-
+        transform: translateX(100%)
       }
     }
     .main {
       margin-top: .5rem;
-      /*transition: all 0.375s;*/
-      &.chooseTab0 {
-        /*transform: translate3d(0, 0, 0)*/
-      }
-      &.chooseTab1 {
-
-      }
       .personalWeb {
+        display: flex;
+        justify-content: space-between;
         margin-top: .5rem;
         border: {
           top: 1px solid #dedede;
           bottom: 1px solid #dedede;
         }
-      ;
         height: 3rem;
         width: 100%;
         background: #fff;
-        display: flex;
-        justify-content: space-between;
         div {
           line-height: 3rem;
         }
@@ -320,23 +294,23 @@
           }
         }
         .latestDesc {
-          color: #aaa;
           position: relative;
           right: 1rem;
+          color: #aaa;
         }
       }
       .msg {
         margin-top: .5rem;
         .msgList {
+          display: flex;
+          justify-content: space-between;
           border: {
             bottom: 1px solid #dedede;
           }
-        ;
           height: 3rem;
           width: 100%;
           background: #fff;
-          display: flex;
-          justify-content: space-between;
+
           div {
             line-height: 3rem;
           }
@@ -357,7 +331,6 @@
         }
       }
     }
-
   }
 
 </style>

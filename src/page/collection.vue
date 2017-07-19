@@ -48,33 +48,28 @@
 
   .collection {
     .contents {
+      margin: .5rem 0 0 0;
       width: 100%;
       height: 4rem;
-      background: #fff;
-      margin: {
-        top: .5rem;
-      }
-    ;
       border: {
         top: 1px solid #eee;
         bottom: 1px solid #eee;
       }
-    ;
+      background: #fff;
     }
     .contentsName {
-      line-height: 2.3rem;
       position: relative;
       left: 1rem;
+      line-height: 2.3rem;
     }
     .contentsNum {
       @extend .contentsName;
-      color: #989898;
       line-height: 1.5rem;
       font: {
         size: .9rem;
         weight: 300;
       }
-    ;
+      color: #989898;
     }
   }
 </style>

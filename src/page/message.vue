@@ -2,21 +2,12 @@
   <div>
     <v-header v-on:currentIndex="currentIndex"></v-header>
     <div class="noticeMain">
-      <div v-if="bindIndex === 0">
-        <v-notice :notice="notice"></v-notice>
-      </div>
-      <div v-if="bindIndex === 1">
-        <v-notice :notice="notice"></v-notice>
-      </div>
-      <div v-if="bindIndex === 2">
-        <v-notice :notice="notice"></v-notice>
-      </div>
+      <v-notice :notice="notice"></v-notice>
     </div>
   </div>
-
 </template>
 
-<script type="text/ecmascript-6">
+<script>
   import MsgHeader from '../components/messageHeader.vue'
   import Notice from  '../components/notice.vue'
   export default{
@@ -27,7 +18,6 @@
           noticeIndex: ''
         }
       }
-
     },
     methods: {
       currentIndex(index){
@@ -40,7 +30,6 @@
       vNotice: Notice
     }
   }
-
 </script>
 <style lang="scss">
   .noticeMain {

@@ -5,10 +5,9 @@
     <v-list></v-list>
     <v-tab :propTab="propTab"></v-tab>
   </div>
-
 </template>
 
-<script type="text/ecmascript-6">
+<script>
   import Tab from '../components/tab.vue'
   import Search from '../components/search.vue'
   import Nav from '../components/nav.vue'
@@ -18,9 +17,6 @@
       return {
         propTab: 0
       }
-    },
-    created(){
-
     },
     methods: {},
     computed: {},
@@ -39,9 +35,7 @@
       justify-content: space-between;
       div {
         flex: 1;
-
       }
     }
   }
-
 </style>

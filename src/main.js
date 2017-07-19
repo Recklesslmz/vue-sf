@@ -7,17 +7,16 @@ import vuex from 'vuex'
 import axios from 'axios'
 import common from './common/js/common'
 import store from './store/index'
-import hljs from 'highlight.js'
 import 'highlight.js/styles/googlecode.css'
 import './assets/css/animate.css'
+
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+
+Vue.use(MintUI)
 Vue.prototype.commonUrl = common
 Vue.prototype.$http = axios
-Vue.directive('highlight', function (el) {
-  let blocks = el.querySelectorAll('pre code');
-  blocks.forEach((block) => {
-    hljs.highlightBlock(block)
-  })
-})
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

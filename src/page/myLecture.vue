@@ -12,7 +12,7 @@
 
 </template>
 
-<script type="text/ecmascript-6">
+<script>
   import Header from '../components/header.vue'
   export default{
     data(){
@@ -46,10 +46,10 @@
 <style lang="scss">
   .lecture {
     .lectureTab {
-      height: 2.5rem;
       display: flex;
-      box-shadow: 1px 1px 1px #eee;
       text-align: center;
+      height: 2.5rem;
+      box-shadow: 1px 1px 1px #eee;
       div {
         line-height: 2.5rem;
         flex: 1;
@@ -57,7 +57,6 @@
           size: .8rem;
         }
         width: 1rem;
-      ;
         color: #777;
       }
       .tabChecked {
@@ -66,6 +65,4 @@
       }
     }
   }
-
-
 </style>
