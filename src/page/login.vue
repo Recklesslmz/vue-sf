@@ -5,10 +5,11 @@
     </div>
     <div class="content">
       <div class="phone">
-        <input type="text" placeholder="手机号" v-model="mobile">
+        <input type="tel" placeholder="手机号" v-model="mobile">
       </div>
+
       <div class="password">
-        <input type="text" placeholder="密码" v-model="password">
+        <input type="password" autocomplete="new-password" placeholder="密码" v-model="password">
       </div>
     </div>
 
@@ -28,6 +29,10 @@
       <div><img src="http://oqjgod7s1.bkt.clouddn.com/googlesf.png"></div>
       <div><img src="http://oqjgod7s1.bkt.clouddn.com/githubsf.png"></div>
     </div>
+    <div class="clearBoth"></div>
+    <div class="register" @click="toRegister">
+      注册账号
+    </div>
   </div>
 </template>
 
@@ -38,12 +43,12 @@
       return {
         mobile: '',
         password: '',
-        localMobile: window.localStorage.getItem('mobile'),
+        localMobile: window.localStorage.getItem('phone'),
         localPassword: window.localStorage.getItem('password')
       }
     },
     created(){
-
+      this.isHasAccount()
     },
     methods: {
       checkForm(){
@@ -51,21 +56,29 @@
         if (this.localMobile !== this.mobile || this.localPassword !== this.password) return Toast('用户名或密码错误')
         return true
       },
+      isHasAccount(){
+        if (!this.localMobile) this.$router.push({path: '/Register'})
+      },
       login(){
         const isValid = this.checkForm()
         console.log(isValid)
         if (!isValid) return
-        if (this.localMobile === this.mobile && this.localPassword === this.password) this.$router.push({path: '/'})
+        if (this.localMobile === this.mobile && this.localPassword === this.password) this.$router.push({path: '/Main'})
       },
       showTips(){
         Toast('我只是装饰啦')
+      },
+      toRegister(){
+        this.$router.push({path: '/Register'})
       }
     }
 
   }
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
+  @import "../assets/sass/common";
+
   .Login {
     .logo {
       img {
@@ -143,6 +156,13 @@
           width: 60%;
         }
       }
+    }
+    .register {
+      position: absolute;
+      bottom: 1rem;
+      text-align: center;
+      width: 100%;
+      color: $commonColor;
     }
   }
 </style>

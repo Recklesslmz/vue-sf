@@ -47,7 +47,7 @@
         let instance = Toast('注册成功')
         setTimeout(() => {
           instance.close()
-          this.$router.push({path: '/login'})
+          this.$router.push({path: '/'})
         }, 500)
         //将账号密码保存在本地的localStorage中
         window.localStorage.setItem('username', this.username)

@@ -36,7 +36,7 @@
         this.chooseIndex = index
         switch (index) {
           case 0:
-            this.$router.push({path: '/'})
+            this.$router.push({path: '/main'})
             break
           case 1:
             break
@@ -48,7 +48,7 @@
             this.$router.push({path: '/my'})
             break
           default:
-            this.$router.push({path: '/'})
+            this.$router.push({path: '/main'})
         }
       }
     },

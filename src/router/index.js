@@ -12,18 +12,9 @@ import lecture from '../page/myLecture.vue'
 Vue.use(Router)
 
 export default new Router({
-  routes: [{
-    path: '/Register',
-    name: 'Register',
-    component: Register,
-    beforeEnter: (to, from, next) => {
-      document.getElementsByTagName('body')[0].style.background = '#f2f2f2'
-      next()
-
-    }
-  },
+  routes: [
     {
-      path: '/login',
+      path: '/',
       name: 'Login',
       component: Login,
       beforeEnter: (to, from, next) => {
@@ -33,13 +24,22 @@ export default new Router({
       }
     },
     {
-      path: '/',
+      path: '/Register',
+      name: 'Register',
+      component: Register,
+      beforeEnter: (to, from, next) => {
+        document.getElementsByTagName('body')[0].style.background = '#f2f2f2'
+        next()
+
+      }
+    },
+    {
+      path: '/Main',
       name: 'Main',
       component: Main,
       beforeEnter: (to, from, next) => {
-        document.getElementsByTagName('body')[0].style.background = '#fff'
+        document.getElementsByTagName('body')[0].style.background = '#f2f2f2'
         next()
-
       }
     },
     {

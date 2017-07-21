@@ -18,8 +18,8 @@
         propTab: 0
       }
     },
-    methods: {},
-    computed: {},
+    created(){
+    },
     components: {
       vTab: Tab,
       vSearch: Search,
