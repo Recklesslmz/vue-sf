@@ -4,7 +4,7 @@
     <div class="top"></div>
     <div class="topDetail">
       <div class="avatar">
-        <img src="https://sfault-avatar.b0.upaiyun.com/357/506/3575066146-5949b8b0e8f01_huge256">
+        <img src="http://oqjgod7s1.bkt.clouddn.com/sfavatar.jpeg">
       </div>
       <div class="memberName">Reckless</div>
       <div class="medal">

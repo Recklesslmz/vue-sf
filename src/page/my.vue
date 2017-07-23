@@ -3,7 +3,7 @@
     <div>
       <v-header :headerProps="headerProps"></v-header>
       <div class="top" @click='toMyInfo'>
-        <div class="avatar"><img src="https://sfault-avatar.b0.upaiyun.com/357/506/3575066146-5949b8b0e8f01_huge256">
+        <div class="avatar"><img src="http://oqjgod7s1.bkt.clouddn.com/sfavatar.jpeg">
         </div>
         <div class="name">Reckless</div>
         <div class="iconRight"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
