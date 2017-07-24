@@ -68,10 +68,22 @@
       </transition>
       <transition name="fade">
         <div class="tab-personal" v-if="currentIndex === 1">
-          <div class="msg">
-            <div class="msgList" v-for="item in infoList">
-              <div class="msgName">{{item.name}}</div>
-              <div class="msgIcon"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
+          <div class="city">
+            <div class="city-state">城市</div>
+            <div class="city-name">南京</div>
+          </div>
+          <div class="education">
+            <div class="education-name">学历</div>
+            <div class="education-desc">
+              <div>南京铁道职业技术学院</div>
+              <div class="edu-pro">软件技术</div>
+            </div>
+          </div>
+          <div class="education">
+            <div class="education-name">工作</div>
+            <div class="education-desc">
+              <div>上海非码网络科技有限公司</div>
+              <div class="edu-pro">前端开发工程师</div>
             </div>
           </div>
         </div>
@@ -143,7 +155,7 @@
   }
 
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
   .myInfo {
     .component-fade-enter-active, .component-fade-leave-active {
       transition: opacity .5s ease;
@@ -329,6 +341,52 @@
             }
           }
         }
+      }
+    }
+  }
+
+  .city {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 3rem;
+    background: #fff;
+    div {
+      line-height: 3rem;
+    }
+    .city-state{
+      position: relative;
+      left: .5rem;
+    }
+    .city-name{
+      position: relative;
+      right:.5rem;
+      font-weight: 300;
+      color: #aaa;
+    }
+  }
+
+  .education {
+    display: flex;
+    justify-content: space-between;
+    margin-top: .1rem;
+    line-height: 1.8rem;
+    width: 100%;
+    height: 3.5rem;
+    background: #fff;
+    .education-name{
+      position: relative;
+      left:.5rem;
+    }
+    .education-desc{
+      position: relative;
+      right:.5rem;
+      color: #aaa;
+      div{
+        font-weight: 300;
+      }
+      .edu-pro{
+        float: right;
       }
     }
   }
