@@ -1,38 +1,22 @@
 <template>
   <div class="Label">
-    <div class="labelTag">活跃标签</div>
+    <div class="labelTag">{{label.title}}</div>
     <div class="labelMain">
-      <div class="tagName" v-for="item in labelList.list">
+      <div class="tagName" v-for="item in label.list">
         <div class="tagClass">{{item.title}}</div>
-        <div class="tagNum">{{item.num}}</div>
+        <div v-show="label.isShowNum" class="tagNum">{{item.num}}</div>
       </div>
       <div class="s-clear"></div>
     </div>
   </div>
-
 </template>
 
 <script type="text/ecmascript-6">
-  import {mapState} from 'vuex'
   export default{
-    data(){
-      return {}
+    props: {
+      label: Object,
     },
-    created(){
-      this.getInfo()
-    },
-    methods: {
-      getInfo(){
-        this.$store.dispatch('GET_LABEL_LIST')
-      }
-    },
-    computed: {
-      ...mapState({
-        labelList: state => state.labelList
-      })
-    }
   }
-
 </script>
 <style lang="scss">
   .s-clear {
@@ -42,28 +26,25 @@
   .Label {
     margin: {
       top: 1rem;
-      left: .5rem;
       bottom: 2rem;
     }
-  ;
     .labelTag {
       color: #aaa;
+      margin: 0 0 0 .5rem;
       font: {
         size: .9rem;
         weight: 300;
       }
-    ;
     }
     .labelMain {
       margin: {
         top: .5rem;
       }
-    ;
       background: #fff;
-      padding:{
-        top:.5rem;
+      padding: {
+        top: .5rem;
         bottom: 1rem;
-      };
+      }
     }
     .tagName {
       float: left;
@@ -71,7 +52,6 @@
         left: 3%;
         top: .5rem;
       }
-    ;
       display: flex;
       height: 1.7rem;
       div {
@@ -85,7 +65,6 @@
           left: 1rem;
           right: 1rem;
         }
-      ;
       }
       .tagNum {
         background: #79c7aa;
@@ -94,10 +73,8 @@
           left: 1rem;
           right: 1rem;
         }
-      ;
       }
 
     }
   }
-
 </style>

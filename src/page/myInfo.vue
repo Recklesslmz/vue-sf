@@ -62,7 +62,7 @@
             </div>
           </div>
           <div>
-            <v-table></v-table>
+            <v-table :label="labelList"></v-table>
           </div>
         </div>
       </transition>
@@ -71,6 +71,10 @@
           <div class="city">
             <div class="city-state">城市</div>
             <div class="city-name">南京</div>
+          </div>
+          <div class="city">
+            <div class="city-state">GitHub</div>
+            <div class="city-name">https://github.com/Recklesslmz</div>
           </div>
           <div class="education">
             <div class="education-name">学历</div>
@@ -86,6 +90,31 @@
               <div class="edu-pro">前端开发工程师</div>
             </div>
           </div>
+          <div class="city">
+            <div class="city-state">邮箱</div>
+            <div class="city-name">muzi.sunjing@gmain.com</div>
+          </div>
+          <div>
+            <v-table :label="labelList"></v-table>
+          </div>
+          <div class="labelTag">项目&著作</div>
+          <div class="labelMain">
+            暂无项目&著作
+          </div>
+          <div class="labelTag">学习经历</div>
+          <div class="labelWork">
+            <div class="work-name">南京铁道职业技术学院</div>
+            <div class="work-state">软件技术</div>
+          </div>
+          <div class="labelTag">工作经历</div>
+          <div class="labelWork">
+            <div class="work-name">上海非码网络科技有限公司 2015 12.1 - 至今</div>
+            <div class="work-state">前端开发工程师</div>
+          </div>
+          <div class="labelWork">
+            <div class="work-name">8天在线网络科技有限公司 2015 1.15 - 2015 11.30</div>
+            <div class="work-state">前端开发工程师</div>
+          </div>
         </div>
       </transition>
     </div>
@@ -95,6 +124,7 @@
 
 <script type="text/ecmascript-6">
   import Label from '../components/label'
+  import {mapState} from 'vuex'
   export default{
     created(){
       this.choose(0)
@@ -114,7 +144,12 @@
           {name: '我的分享', num: 2, mark: 4},
           {name: '我的收藏', num: 4, mark: 5},
           {name: '我的讲座', num: 0, mark: 6},
-        ]
+        ],
+        labelList: {
+          title: '',
+          isShowNum: '',
+          list: []
+        },
       }
     },
     components: {
@@ -126,11 +161,72 @@
         switch (index) {
           case 0:
             this.chooseTab = 'chooseTab0'
+            const tecList = [
+              {
+                "title": "vue.js",
+                "num": "110"
+              },
+              {
+                "title": "javascript",
+                "num": "120"
+              },
+              {
+                "title": "vue-cli",
+                "num": "130"
+              },
+              {
+                "title": "css3",
+                "num": "140"
+              },
+              {
+                "title": "webpack",
+                "num": "150"
+              },
+              {
+                "title": "vue-router",
+                "num": "180"
+              },
+              {
+                "title": "vue-resource",
+                "num": "170"
+              },
+              {
+                "title": "sass",
+                "num": "170"
+              },
+              {
+                "title": "前端开发工程化",
+                "num": "160"
+              }
+            ]
+            this.labelList.list = tecList
+            this.labelList.title = '活跃标签'
+            this.labelList.isShowNum = true
             break;
           case 1:
             this.chooseTab = 'chooseTab1'
+            const list = [
+              {
+                "title": "vue",
+              },
+              {
+                "title": "javascript",
+              },
+              {
+                "title": "html",
+              }, {
+                "title": "sass"
+              }, {
+                "title": "GitHub"
+              }]
+            this.labelList.list = list
+            this.labelList.title = '擅长技能'
+            this.labelList.isShowNum = false
             break;
         }
+      },
+      getInfo(){
+        this.$store.dispatch('GET_LABEL_LIST')
       },
       toNext(index){
         console.log(index)
@@ -151,7 +247,7 @@
       back(){
         this.$router.push({path: '/my'})
       }
-    }
+    },
   }
 
 </script>
@@ -348,19 +444,20 @@
   .city {
     display: flex;
     justify-content: space-between;
+    margin-top: .1rem;
     width: 100%;
     height: 3rem;
     background: #fff;
     div {
       line-height: 3rem;
     }
-    .city-state{
+    .city-state {
       position: relative;
       left: .5rem;
     }
-    .city-name{
+    .city-name {
       position: relative;
-      right:.5rem;
+      right: .5rem;
       font-weight: 300;
       color: #aaa;
     }
@@ -374,21 +471,69 @@
     width: 100%;
     height: 3.5rem;
     background: #fff;
-    .education-name{
+    .education-name {
       position: relative;
-      left:.5rem;
+      left: .5rem;
     }
-    .education-desc{
+    .education-desc {
       position: relative;
-      right:.5rem;
+      right: .5rem;
       color: #aaa;
-      div{
+      div {
         font-weight: 300;
       }
-      .edu-pro{
+      .edu-pro {
         float: right;
       }
     }
   }
 
+  .labelTag {
+    margin: 0 0 0 .5rem;
+    color: #aaa;
+    font: {
+      size: .9rem;
+      weight: 300;
+    }
+  }
+
+  .labelMain {
+    padding-left: .5rem;
+    margin: {
+      top: .5rem;
+      bottom: 1rem;
+    }
+    height: 2.5rem;
+    line-height: 2.5rem;
+    background: #fff;
+  }
+
+  .labelWork {
+    margin: {
+      top: .5rem;
+      bottom: 1rem;
+    }
+    height: 3.2rem;
+    background: #fff;
+    div {
+      width: 96%;
+      margin-left: 2%;
+    }
+  }
+
+  .work-name {
+    position: relative;
+    top: .5rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .work-state {
+    position: relative;
+    top: .9rem;
+    font-weight: 300;
+    color: #aaa;
+  }
 </style>
