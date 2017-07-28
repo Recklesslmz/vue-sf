@@ -50,6 +50,10 @@
             <div class="latestName">个人网站</div>
             <div class="latestDesc">www.recklesslmz.com</div>
           </div>
+          <div class="personal-state">
+            <div class="name">简介</div>
+            <div class="introduction">一只很菜的前端攻城狮~</div>
+          </div>
           <div class="personalWeb">
             <div class="latestName">我的动态</div>
             <div class="latestIcon"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
@@ -373,6 +377,26 @@
     }
     .main {
       margin-top: .5rem;
+      .personal-state{
+        width: 100%;
+        height: 4rem;
+        background: #fff;
+        div{
+          width: 92%;
+          margin-left: 4%;
+        }
+        .name{
+          position: relative;
+          top:1rem;
+
+        }
+        .introduction{
+          position: relative;
+          top:1.3rem;
+          font-weight: 300;
+          color: #aaa;
+        }
+      }
       .personalWeb {
         display: flex;
         justify-content: space-between;
