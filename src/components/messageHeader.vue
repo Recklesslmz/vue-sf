@@ -3,7 +3,8 @@
     <div class="back">
       <img @click="back" src="http://om10u3y7b.bkt.clouddn.com/left.png">
     </div>
-    <div class="mid-menu">
+    <div v-if="!header.isShowTab" class="title">我的私信</div>
+    <div class="mid-menu" v-show="header.isShowTab">
       <div :class="['list',{listChecked:chooseIndex === index}]" v-for="(item,index) in midMenuList"
            @click="chooseMenu(index)">{{item.name}}
       </div>
@@ -12,11 +13,13 @@
       忽略
     </div>
   </div>
-
 </template>
 
 <script type="text/ecmascript-6">
   export default{
+    props: {
+      header: Object
+    },
     data(){
       return {
         midMenuList: [
@@ -93,6 +96,14 @@
       }
     ;
     }
+  }
+
+  .title {
+    line-height: 3rem;
+    font: {
+      size: 1rem;
+    }
+    color: #fff;
   }
 
 

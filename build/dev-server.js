@@ -33,6 +33,34 @@ var message = appData.noticeList
 
 var apiRoutes = express.Router()
 
+
+apiRoutes.post('/login', function (req, res, next) {
+  console.log(req)
+  res.json({
+    errno: 0,
+    data: message,
+  });
+  // //用户名密码
+  // var username = req.body.username
+  // var password = req.body.password
+  //
+  // if (username === 'lmz' && password === '123456') {
+  //   res.cookie('user', username)
+  //   return res.send({
+  //     status: 1
+  //   })
+  // }
+  // res.json({
+  //   errno: 0,
+  //   data: message
+  // });
+  // return res.send({
+  //   status: 0,
+  //   info: '登录失败'
+  // })
+
+})
+
 apiRoutes.get('/message', function (req, res) {
   res.json({
     errno: 0,

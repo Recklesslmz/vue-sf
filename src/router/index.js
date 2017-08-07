@@ -1,14 +1,19 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Register from '../page/register.vue'
-import Login from '../page/login.vue'
-import Main from '../page/main.vue'
-import My from '../page/my.vue'
-import myInfo from  '../page/myInfo.vue'
-import article from '../page/article.vue'
-import message from '../page/message.vue'
-import collection from '../page/collection.vue'
-import lecture from '../page/myLecture.vue'
+
+
+const Login = () => import('../page/Login.vue')
+const Main = () => import('../page/Main.vue')
+const My = () => import('../page/My.vue')
+const myInfo = () => import('../page/myInfo.vue')
+const article = () => import('../page/article.vue')
+const message = () => import('../page/message.vue')
+const collection = () => import('../page/collection.vue')
+const lecture = () => import('../page/myLecture.vue')
+const latestNews = () => import('../page/latestNews.vue')
+const Register = () => import('../page/Register.vue')
+const privateLetter = () => import('../page/privateLetter.vue')
+
 Vue.use(Router)
 
 export default new Router({
@@ -93,6 +98,24 @@ export default new Router({
       component: lecture,
       beforeEnter: (to, from, next) => {
         document.getElementsByTagName('body')[0].style.background = '#fff'
+        next()
+      }
+    },
+    {
+      path: '/latestNews',
+      name: 'latestNews',
+      component: latestNews,
+      beforeEnter: (to, from, next) => {
+        document.getElementsByTagName('body')[0].style.background = '#f2f2f2'
+        next()
+      }
+    },
+    {
+      path: '/privateLetter',
+      name: 'privateLetter',
+      component: privateLetter,
+      beforeEnter: (to, from, next) => {
+        document.getElementsByTagName('body')[0].style.background = '#f2f2f2'
         next()
       }
     }

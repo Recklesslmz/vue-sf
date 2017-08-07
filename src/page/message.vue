@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-header v-on:currentIndex="currentIndex"></v-header>
+    <v-header :header="header" v-on:currentIndex="currentIndex"></v-header>
     <div class="noticeMain">
       <v-notice :notice="notice"></v-notice>
     </div>
@@ -13,6 +13,9 @@
   export default{
     data(){
       return {
+        header: {
+          isShowTab: true
+        },
         bindIndex: '',
         notice: {
           noticeIndex: ''

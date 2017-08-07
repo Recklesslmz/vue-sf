@@ -8,7 +8,7 @@
         <div class="name">Reckless</div>
         <div class="iconRight"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
       </div>
-      <div class="latest">
+      <div class="latest" @click='toNext(1)'>
         <div class="latestName">最新动态</div>
         <div class="latestIcon"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
       </div>
@@ -17,7 +17,7 @@
           <div class="msgName">我的消息</div>
           <div class="msgIcon"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
         </div>
-        <div class="msgList">
+        <div class="msgList" @click="toNext(3)">
           <div class="msgName">我的私信</div>
           <div class="msgIcon"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
         </div>
@@ -63,8 +63,14 @@
       },
       toNext(index){
         switch (index) {
+          case 1:
+            this.$router.push({path: '/latestNews'})
+            break
           case 2:
             this.$router.push({path: '/message'})
+            break
+          case 3:
+            this.$router.push({path: '/privateLetter'})
             break
           case 5:
             this.$router.push({path: '/collection'})
