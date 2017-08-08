@@ -2,14 +2,14 @@
   <div>
     <v-header :header="header"></v-header>
     <div class="content-state">
-      <div class="content-list" v-for="item in 5">
+      <div class="content-list" v-for="item in dataList">
         <div class="content-wrapper">
           <img class="avatar" src="http://oqjgod7s1.bkt.clouddn.com/sfavatar.jpeg">
-          <span class="name">segmentFault团队</span>
-          <span class="time">30天前</span>
+          <span class="name">{{item.name}}</span>
+          <span class="time">{{item.time}}</span>
         </div>
         <div class="content-detail">
-          https://segmentfault.com/
+          {{item.message}}
         </div>
       </div>
     </div>
@@ -17,15 +17,31 @@
 </template>
 <script>
   import vHeader from '../components/messageHeader.vue'
+  import moment from 'moment'
   export default{
     data(){
       return {
         header: {
           isShowTab: false
-        }
+        },
+        dateCurrent: '',
+        dataList: [
+          {name: 'segmentFault团队', time: '2015-08-01', message: '尊敬的segmentFault用户你好'},
+          {name: 'Recklesslmz', time: '2016-08-01', message: 'https://segmentfault.com/'},
+          {name: 'GitHub', time: '2017-08-01', message: '欢迎来到GitHub'}
+        ]
       }
     },
-    methods: {},
+    created(){
+      this.getInfo()
+    },
+    methods: {
+      getInfo(){
+        this.dataList.forEach(item => {
+          item.time = moment(item.time).locale('zh-cn').startOf('day').fromNow()
+        })
+      }
+    },
     components: {
       vHeader: vHeader
     }
@@ -71,7 +87,8 @@
   .content-detail {
     width: 96%;
     margin-left: 2%;
-    padding-bottom: .6rem;
+    margin-top: 1rem;
+    padding-bottom: .8rem;
     font: {
       weight: 300;
     }
