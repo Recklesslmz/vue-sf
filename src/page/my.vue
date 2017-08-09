@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="msg">
-        <div class="msgList">
+        <div class="msgList" @click="toNext(4)">
           <div class="msgName">我的关注</div>
           <div class="msgIcon"><img src="http://oqjgod7s1.bkt.clouddn.com/rightA.png"></div>
         </div>
@@ -68,6 +68,9 @@
             break
           case 2:
             this.$router.push({path: '/message'})
+            break
+          case 4:
+            this.$router.push({path: '/attention'})
             break
           case 3:
             this.$router.push({path: '/privateLetter'})

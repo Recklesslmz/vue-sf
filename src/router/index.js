@@ -13,57 +13,36 @@ const lecture = () => import('../page/myLecture.vue')
 const latestNews = () => import('../page/latestNews.vue')
 const Register = () => import('../page/Register.vue')
 const privateLetter = () => import('../page/privateLetter.vue')
+const attention = () => import('../page/attention.vue')
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
       name: 'Login',
       component: Login,
-      beforeEnter: (to, from, next) => {
-        document.getElementsByTagName('body')[0].style.background = '#f2f2f2'
-        next()
-
-      }
     },
     {
       path: '/Register',
       name: 'Register',
       component: Register,
-      beforeEnter: (to, from, next) => {
-        document.getElementsByTagName('body')[0].style.background = '#f2f2f2'
-        next()
-
-      }
     },
     {
       path: '/Main',
       name: 'Main',
       component: Main,
-      beforeEnter: (to, from, next) => {
-        document.getElementsByTagName('body')[0].style.background = '#f2f2f2'
-        next()
-      }
     },
     {
       path: '/My',
       name: 'My',
       component: My,
-      beforeEnter: (to, from, next) => {
-        document.getElementsByTagName('body')[0].style.background = '#f2f2f2'
-        next()
-      }
     },
     {
       path: '/myInfo',
       name: 'myInfo',
       component: myInfo,
-      beforeEnter: (to, from, next) => {
-        document.getElementsByTagName('body')[0].style.background = '#f2f2f2'
-        next()
-      }
     },
     {
       path: '/article',
@@ -87,10 +66,6 @@ export default new Router({
       path: '/collection',
       name: 'collection',
       component: collection,
-      beforeEnter: (to, from, next) => {
-        document.getElementsByTagName('body')[0].style.background = '#f2f2f2'
-        next()
-      }
     },
     {
       path: '/lecture',
@@ -105,19 +80,25 @@ export default new Router({
       path: '/latestNews',
       name: 'latestNews',
       component: latestNews,
-      beforeEnter: (to, from, next) => {
-        document.getElementsByTagName('body')[0].style.background = '#f2f2f2'
-        next()
-      }
     },
     {
       path: '/privateLetter',
       name: 'privateLetter',
       component: privateLetter,
-      beforeEnter: (to, from, next) => {
-        document.getElementsByTagName('body')[0].style.background = '#f2f2f2'
-        next()
-      }
+    },
+    {
+      path: '/attention',
+      name: 'attention',
+      component: attention,
     }
+
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  document.getElementsByTagName('body')[0].style.background = '#f2f2f2'
+  next()
+})
+export default router
+
+
