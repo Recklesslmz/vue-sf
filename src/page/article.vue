@@ -7,9 +7,10 @@
 </template>
 
 <script type="text/ecmascript-6">
+
+
+
   export default{
-    mounted(){
-    },
     methods: {
       login(){
         this.$http.post('/api/login', {
